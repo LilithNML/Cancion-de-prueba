@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nuestra Canción</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="pantalla-inicial">
+    <div class="mensaje">
+      <h1>Para mi amor</h1>
+      <p>
+        Hay canciones que no solo se escuchan... se sienten.  
+        Esta es nuestra canción. Porque cada vez que suena,  
+        siento que bailamos juntos en el alma.
+      </p>
+      <button onclick="iniciarCancion()">Escuchar</button>
+    </div>
+  </div>
+
+  <div id="pantalla-cancion" class="oculto">
+    <audio id="audio" src="beat-it.mp3"></audio>
+    <div id="letra-container"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
