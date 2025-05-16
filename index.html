@@ -7,19 +7,19 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div id="pantalla-inicial">
+  <div id="pantalla-inicial" class="fade-in">
     <div class="mensaje">
       <h1>Para mi amor</h1>
       <p>
-        Hay canciones que no solo se escuchan... se sienten.  
-        Esta es nuestra canción. Porque cada vez que suena,  
+        Hay canciones que no solo se escuchan... se sienten.<br />
+        Esta es nuestra canción. Porque cada vez que suena,<br />
         siento que bailamos juntos en el alma.
       </p>
       <button onclick="iniciarCancion()">Escuchar</button>
     </div>
   </div>
 
-  <div id="pantalla-cancion" class="oculto">
+  <div id="pantalla-cancion" class="fade-out oculto">
     <audio id="audio" src="beat-it.mp3"></audio>
     <div id="letra-container"></div>
   </div>
