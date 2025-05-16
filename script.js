@@ -1,9 +1,17 @@
 function iniciarCancion() {
-  document.getElementById('pantalla-inicial').classList.add('oculto');
-  document.getElementById('pantalla-cancion').classList.remove('oculto');
-  const audio = document.getElementById('audio');
-  audio.play();
-  mostrarLetraSincronizada();
+  const pantallaInicial = document.getElementById('pantalla-inicial');
+  const pantallaCancion = document.getElementById('pantalla-cancion');
+  pantallaInicial.classList.remove('fade-in');
+  pantallaInicial.classList.add('fade-out');
+
+  setTimeout(() => {
+    pantallaInicial.classList.add('oculto');
+    pantallaCancion.classList.remove('oculto');
+    pantallaCancion.classList.remove('fade-out');
+    pantallaCancion.classList.add('fade-in');
+    document.getElementById('audio').play();
+    mostrarLetraSincronizada();
+  }, 1000);
 }
 
 const letraLRC = `00:38.076 -> Le dijeron: "No vengas nunca por aquí
